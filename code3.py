@@ -3,6 +3,11 @@ import boto3
 import requests
 
 def lambda_handler(event, context):
+    # Set environment variables
+    os.environ['AWS_ACCESS_KEY_ID'] = 'your_access_key_id'
+    os.environ['AWS_SECRET_ACCESS_KEY'] = 'your_secret_access_key'
+    os.environ['AWS_REGION'] = 'your_preferred_region'
+    
     # Retrieve environment variables
     aws_access_key_id = os.environ.get('AWS_ACCESS_KEY_ID')
     aws_secret_access_key = os.environ.get('AWS_SECRET_ACCESS_KEY')
